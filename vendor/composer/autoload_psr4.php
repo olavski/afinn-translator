@@ -9,6 +9,7 @@ return array(
     'Stichoza\\GoogleTranslate\\' => array($vendorDir . '/stichoza/google-translate-php/src/Stichoza/GoogleTranslate'),
     'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src'),
     'Olavski\\Translate\\' => array($baseDir . '/src/Translate'),
+    'Olavski\\Norec\\' => array($baseDir . '/src/Norec'),
     'Olavski\\Afinn\\' => array($baseDir . '/src/Afinn'),
     'GuzzleHttp\\Psr7\\' => array($vendorDir . '/guzzlehttp/psr7/src'),
     'GuzzleHttp\\Promise\\' => array($vendorDir . '/guzzlehttp/promises/src'),

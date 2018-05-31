@@ -126,7 +126,7 @@ class Build
         $d = dir($dir);
         while (false !== ($entry = $d->read()))
         {
-            if ( empty($ext) || pathinfo($entry, PATHINFO_EXTENSION) )
+            if ( empty($ext) || pathinfo($entry, PATHINFO_EXTENSION) == $ext )
                 $file_a[$entry] = true;
         }
         $d->close();

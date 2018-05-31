@@ -22,13 +22,39 @@ Example:
 # Translate AFINN to french
 php translate.php fr
 ```
-## Output
-Three json files will be created in the /data/ directory
+### Translation Output
+Two tsv files will be created in the /data/{LANG} directory
 
-* afinn-{LANG}-new.json - list of unique non-english words
-* afinn-{LANG}-same.json - list of words that translated to the same as the wnglish word
-* afinn-{LANG}-combined.json - combined list of non-english and english words
+* translated.json - list of unique non-english words
+* en-untranslated.tsv - list of english words that could not be translated
 
+
+## Build
+Build compiles all .tsv files in /data/{LANG} directory into one single file
+
+it will start with 
+* translated.tsv
+
+and then go through every other .tsv file in that diretory and merge the lists.
+If a word exists in several files the weight will be overwritten with the weight of the last occurrance of the word.
+
+Example:
+```bash
+# Merge all .tsv files into one
+php build.php no
+```
+The compiled files can be found in /data/{lang}/build/{lang}.tsv
+
+
+## Watch
+Running the watcher will recompile the final .tsv file every time one of the files in /data/{LANG} is updated.
+This is useful is you are curating lists, and using the compiled .tsv in a classifier while testing.
+
+Example:
+```bash
+# Watch for changes in .tsv and recompile
+php watch.php no
+```
 
 
 ## Resources

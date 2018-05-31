@@ -24,6 +24,7 @@ class ComposerStaticInita78ba1e90443fa1b29b29e53878c3a27
         'O' => 
         array (
             'Olavski\\Translate\\' => 18,
+            'Olavski\\Norec\\' => 14,
             'Olavski\\Afinn\\' => 14,
         ),
         'G' => 
@@ -46,6 +47,10 @@ class ComposerStaticInita78ba1e90443fa1b29b29e53878c3a27
         'Olavski\\Translate\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/Translate',
+        ),
+        'Olavski\\Norec\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Norec',
         ),
         'Olavski\\Afinn\\' => 
         array (
